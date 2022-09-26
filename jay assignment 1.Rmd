@@ -1,0 +1,47 @@
+---
+title: "Assignment 1"
+author: "Jay Oza"
+date: "2022-09-26"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+##calling a ISLR library and print carsets dataset
+```{r}
+library(ISLR)
+data<- Carseats
+
+print(Carseats)
+
+```
+##scatter plot between sales and price
+```{r}
+
+plot(Carseats$Sales, Carseats$Price, main = "Scatterplot between Price and Sales", xlab = "Sales", ylab = "Price",abline(Carseats$Sales,Carseats$Price))
+barplot(Carseats$Price)
+```
+##corelation between sales and price
+```{r}
+cor(Carseats$Sales,Carseats$Price)
+
+```
+#maximum value attribute of advertisement
+```{r}
+max(Carseats$Advertising)
+```
+
+#summary of carseats
+```{r}
+summary(data)
+```
+
+#Interquartile range of price
+```{r}
+
+IQR(Carseats$Price)
+```
+
